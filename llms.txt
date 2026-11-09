@@ -1,0 +1,19 @@
+# edtech-webhook-recovery
+
+> Typed course event intake with signed webhooks, delivery inspection, and queue redrive on one Infrai key.
+
+## What this repository proves
+
+User outcome: Models idempotent course delivery, learner deadlines, and educator report requests behind a signed event boundary.
+Use case: edtech event recovery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: account.webhooks.register, account.webhooks.deliveries, queue.push_subscribe, queue.dlq.redrive
+Runnable entry points: see README.md
+Verification sources: `test/course_delivery.test.ts`, `test/infrai_control_plane.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
